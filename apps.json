@@ -1,5 +1,5 @@
 {
-    "app": [
+    "apps": [
         {
             "name": "demoapi1",
             "script": "./server/server.js",
