@@ -1,0 +1,101 @@
+{
+  "name": "Product",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "supplier": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "publishing": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "inventory": {
+      "type": "number"
+    },
+    "newPrice": {
+      "type": "number"
+    },
+    "oldPrice": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "category1": {
+      "type": "string"
+    },
+    "category2": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "Profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": "profileId"
+    },
+    "Category": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "categoryId"
+    },
+    "ProductImage": {
+      "type": "hasMany",
+      "model": "ProductImage",
+      "foreignKey": ""
+    },
+    "Comment": {
+      "type": "hasMany",
+      "model": "Comment",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "editor",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

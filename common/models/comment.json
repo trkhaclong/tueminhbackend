@@ -1,0 +1,38 @@
+{
+  "name": "Comment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Product": {
+      "type": "belongsTo",
+      "model": "Product",
+      "foreignKey": "productId"
+    },
+    "Profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": "profileId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

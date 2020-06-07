@@ -1,0 +1,38 @@
+{
+  "name": "ProductImage",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Product": {
+      "type": "belongsTo",
+      "model": "Product",
+      "foreignKey": "productId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

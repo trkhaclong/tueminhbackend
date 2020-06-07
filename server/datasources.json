@@ -1,0 +1,25 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "tueminhbs",
+    "password": "",
+    "name": "db",
+    "connector": "mongodb",
+    "user": ""
+  },
+  "xxFile": {
+    "name": "xxFile",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage",
+    "nameConflict": "makeUnique"
+  },
+  "productsFile": {
+    "name": "productsFile",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage",
+    "nameConflict": "makeUnique"
+  }
+}
