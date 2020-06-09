@@ -3,10 +3,10 @@
     "host": "localhost",
     "port": 27017,
     "database": "tueminhbs",
-    "password": "sadsdadasa",
+    "password": "",
     "name": "db",
     "connector": "mongodb",
-    "user": "longdeptrai"
+    "user": ""
   },
   "xxFile": {
     "name": "xxFile",
