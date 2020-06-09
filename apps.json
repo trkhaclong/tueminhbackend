@@ -9,7 +9,7 @@
                 "NODE_ENV": "production",
                 "PORT": 8080
             },
-            "node_args": "--max_old_space_size=4096"
+            "node_args": "--max_old_space_size=2048"
         },
         {
             "name": "demoapi2",
@@ -20,7 +20,7 @@
                 "NODE_ENV": "production",
                 "PORT": 8081
             },
-            "node_args": "--max_old_space_size=4096"
+            "node_args": "--max_old_space_size=2046"
         }
     ]
 }
