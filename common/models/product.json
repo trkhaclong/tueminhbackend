@@ -41,6 +41,15 @@
     },
     "category2": {
       "type": "string"
+    },
+    "category3": {
+      "type": "string"
+    },
+    "category4": {
+      "type": "string"
+    },
+    "category5": {
+      "type": "string"
     }
   },
   "validations": [],
